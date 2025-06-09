@@ -1,4 +1,4 @@
-import re, imaplib, email as email_lib, threading, chardet, logging
+import re, imaplib, email as email_lib, threading, chardet, logging, os
 from bs4 import BeautifulSoup as bs
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
@@ -14,12 +14,12 @@ log.add(
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-TOKEN = "8186587728:AAFZF6tGcbqg4rWbYJHJZ8IYV0Bs5tymAn0"
-ADMIN_ID = "939096118"
+TOKEN = os.getenv("TOKEN")
+ADMIN_ID = os.getenv("ADMIN_ID")
 
-IMAP_SERVER = "imap.gmail.com"
-EMAIL_ACCOUNT = "botml9799@gmail.com"
-EMAIL_PASSWORD = "bnxl wsyu qhli groa"
+IMAP_SERVER = os.getenv("IMAP_SERVER")
+EMAIL_ACCOUNT = os.getenv("EMAIL_ACCOUNT ")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 class Imap:
     def __init__(self):
