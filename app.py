@@ -18,7 +18,7 @@ TOKEN = os.getenv("TOKEN")
 ADMIN_ID = os.getenv("ADMIN_ID")
 
 IMAP_SERVER = "imap.gmail.com"
-EMAIL_ACCOUNT = os.getenv("EMAIL_ACCOUNT ")
+EMAIL_ACCOUNT = os.getenv("EMAIL_ACCOUNT")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 class Imap:
